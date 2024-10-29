@@ -17,5 +17,6 @@ PEP_URL = 'https://peps.python.org/'
 TABLE_VIEW = 'pretty'
 FILE_VIEW = 'file'
 LOGS_FILE = 'logs'
-ONE_MB = 1048576
+ONE_MB = 1 * 1024 * 1024
 RESULTS_FILE = 'results'
+DOWNLOADS_FILE = 'downloads'
