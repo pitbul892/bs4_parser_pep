@@ -142,11 +142,8 @@ def main():
         results = MODE_TO_FUNCTION[parser_mode](session)
         if results is not None:
             control_output(results, args)
-    except (PageLoadException, ParserFindTagException)as e:
-        if isinstance(e, PageLoadException):
-            text = f'Возникла ошибка при загрузке страницы: {str(e)}'
-        elif isinstance(e, ParserFindTagException):
-            text = f'Не найден тег: {str(e)}'
+    except (PageLoadException, ParserFindTagException) as e:
+        text = f'Возникла ошибка при загрузке страницы: {str(e)}'
         logging.error(text, stack_info=True)
     finally:
         logging.info('Парсер завершил работу.')
